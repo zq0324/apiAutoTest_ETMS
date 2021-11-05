@@ -1,4 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Fri Nov 05 09:45:59 CST 2021","Fri Nov 05 09:46:00 CST 2021","300","test","test_api","","","","用户登录",""
-"passed","Fri Nov 05 09:46:00 CST 2021","Fri Nov 05 09:46:00 CST 2021","542","test","test_api","","","","文件上传",""
-"passed","Fri Nov 05 09:46:00 CST 2021","Fri Nov 05 09:46:01 CST 2021","431","test","test_api","","","","文件获取",""
