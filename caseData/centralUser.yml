@@ -1,0 +1,11 @@
+- code: cu001
+  name: department-findall
+  url: central-user/central/user/department/findAll.json
+  enable: True
+  tag: smoke  #tag 根据tag执行
+  method: GET
+  header: {"access_token": "${token}"}
+  paramType: params #/json/data
+  data:
+    tenantId: 194
+  validate: {"$.code":0,"$.message":"请求成功!","$.data.0.tenantId":"194"}

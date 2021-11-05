@@ -1,0 +1,28 @@
+- code: b_001
+  caseName: 租户创建分配系统
+  enable: True
+  tag: smoke  #tag 根据tag执行
+  step_list:
+    - name: 登录
+      url: bussiness-uc/user/login
+      method: POST
+      header: {"access_token": "${token}"}
+      paramType: json #/data /params
+      data: {"password": "UH94gWdCgfg=","username": "admin@www.laihui.com"}
+      extractor: {"token": "$.data.access_token"}
+      validate: {"$.code":0,"$.message":"请求成功!"}
+    - name: 新建租户
+      url: bussiness-config/tenant/config/save
+      method: POST
+      header: {"access_token": "${token}"}
+      paramType: json
+      data: {"address":"顶顶顶顶123号","city":"东城区","cityCode":110101,"contacts":"张三","county":"东华门街道","countyCode":110101001,"mobile":"15511112222","phone":"0571-44441123","province":"北京市","provinceCode":110000,"tenantName":"测试","tenantType":"CEMENT_PLANT","tenantTypeName":"水泥厂"}
+      validate: {"$.code":0,"$.message":"请求成功!"}
+    - name: 获取新增租户信息ID
+      url: bussiness-config/tenant/config/page
+      method: GET
+      paramType: params
+      header: {"access_token": "${token}"}
+      data: {"current":1, "size":10}
+      extractor: {"tenantId": "$.data.records[0].id"}
+      validate: {"$.code":0,"$.message":"请求成功!"}

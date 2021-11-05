@@ -1,0 +1,21 @@
+- code: b0001
+  name: 文件上传
+  url: bussiness-uc/file/upload
+  enable: True
+  tag: test  #tag 根据tag执行
+  method: POST
+  header: {"access_token": "${token}"}
+  paramType: data
+  file: {"multipartFile": 'caseTmp\1.jpg'}
+  data: {"bucketName": "test"}
+  validate: {"$.code":0,"$.message":"请求成功!"}
+  extractor: {"fileUrl": "$.data"}
+- code: b0002
+  name: 文件获取
+  url: bussiness-uc/api/${file_url("${fileUrl}")}
+  enable: True
+  tag: test  #tag 根据tag执行
+  method: GET
+  header: {"access_token": "${token}", "name": "${username()}"}
+  paramType: params
+  validate: {}

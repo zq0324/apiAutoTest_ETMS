@@ -1,0 +1,21 @@
+- code: etms003
+  name: 用户登录
+  url: bussiness-uc/user/login
+  enable: True
+  tag: smoke  #tag 根据tag执行
+  uploadFile: # 上传文件
+  method: POST
+  header: {Content-Type: "application/json"}
+  paramType: json #/data /params
+  data: {"password": "UH94gWdCgfg=","username": "admin@www.laihui.com"}
+  extractor: {"token": "$.data.access_token"}
+  validate: {"$.code":0,"$.message":"请求成功!"}
+- code: etms004
+  name: 获取登录信息
+  url: bussiness-uc/user/info
+  enable: True
+  tag: test  #tag 根据tag执行
+  method: GET
+  header: {"access_token": "${token}","tenantId": "1", "userId": "1","username": "1"}
+  paramType: params #/json/data
+  validate: {"$.code":0,"$.message":"请求成功!"}

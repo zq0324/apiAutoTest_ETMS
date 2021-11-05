@@ -1,0 +1,49 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "DESKTOP-UJGTEQK",
+    "children" : [ {
+      "name" : "24268-MainThread",
+      "children" : [ {
+        "name" : "用户登录",
+        "uid" : "db52c6a3f37ee641",
+        "parentUid" : "1dad39ec3bec187d3da08816f873c92e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1636076759801,
+          "stop" : 1636076760101,
+          "duration" : 300
+        },
+        "flaky" : false,
+        "parameters" : [ "{'code': 'a001', 'name': '用户登录', 'url': 'bussiness-uc/user/login', 'enable': True, 'tag': 'test,smoke', 'uploadFile': None, 'method': 'POST', 'header': {'Content-Type': 'application/json'}, 'paramType': 'json', 'data': {'password': 'UH94gWdCgfg=', 'username': 'admin@www.laihui.com'}, 'extractor': {'token': '$.data.access_token'}, 'validate': {'$.code': 0, '$.message': '请求成功!'}}" ]
+      }, {
+        "name" : "文件上传",
+        "uid" : "78ad7332d5ccf9de",
+        "parentUid" : "1dad39ec3bec187d3da08816f873c92e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1636076760103,
+          "stop" : 1636076760645,
+          "duration" : 542
+        },
+        "flaky" : false,
+        "parameters" : [ "{'code': 'b0001', 'name': '文件上传', 'url': 'bussiness-uc/file/upload', 'enable': True, 'tag': 'test', 'method': 'POST', 'header': {'access_token': '${token}'}, 'paramType': 'data', 'file': {'multipartFile': 'caseTmp\\\\1.jpg'}, 'data': {'bucketName': 'test'}, 'validate': {'$.code': 0, '$.message': '请求成功!'}, 'extractor': {'fileUrl': '$.data'}}" ]
+      }, {
+        "name" : "文件获取",
+        "uid" : "4cfcb9952c619137",
+        "parentUid" : "1dad39ec3bec187d3da08816f873c92e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1636076760652,
+          "stop" : 1636076761083,
+          "duration" : 431
+        },
+        "flaky" : false,
+        "parameters" : [ "{'code': 'b0002', 'name': '文件获取', 'url': 'bussiness-uc/api/${file_url(\"${fileUrl}\")}', 'enable': True, 'tag': 'test', 'method': 'GET', 'header': {'access_token': '${token}', 'name': '${username()}'}, 'paramType': 'params', 'validate': {}}" ]
+      } ],
+      "uid" : "1dad39ec3bec187d3da08816f873c92e"
+    } ],
+    "uid" : "c9d0f29c5348309494484e61d2689ce9"
+  } ]
+}

@@ -1,0 +1,23 @@
+[32m2021-11-05 09:45:59.800[0m | [34m[1mDEBUG   [0m | [36mrequestApi.base_requests[0m:[36msend_request[0m:[36m39[0m - [34m[1m�������д���ǰ����: 
+ �ӿ�·��: bussiness-uc/user/login 
+ �������: {'password': 'UH94gWdCgfg=', 'username': 'admin@www.laihui.com'} 
+  ��ȡ����: {'token': '$.data.access_token'} 
+ Ԥ�ڽ��: {'$.code': 0, '$.message': '����ɹ�!'} 
+ [0m
+[32m2021-11-05 09:45:59.801[0m | [31m[1mERROR   [0m | [36mtools[0m:[36mconvert_json[0m:[36m95[0m - [31m[1mExpecting property name enclosed in double quotes: line 1 column 2 (char 1)[0m
+[32m2021-11-05 09:45:59.802[0m | [31m[1mERROR   [0m | [36mtools[0m:[36mconvert_json[0m:[36m95[0m - [31m[1mExpecting property name enclosed in double quotes: line 1 column 2 (char 1)[0m
+[32m2021-11-05 09:45:59.802[0m | [1mINFO    [0m | [36mrequestApi.base_requests[0m:[36msend_request[0m:[36m56[0m - [1mNone[0m
+[32m2021-11-05 09:46:00.096[0m | [1mINFO    [0m | [36mrequestApi.base_requests[0m:[36msend_api[0m:[36m111[0m - [1m
+���������ַ:http://192.168.17.221:31710/bussiness-uc/user/login
+���󷽷�:POST
+����ͷ:{'Accept-Encoding': 'gzip, deflate', 'Accept-Language': 'zh-CN,zh;q=0.9', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36', 'Content-Type': 'application/json'}
+�������:{'password': 'UH94gWdCgfg=', 'username': 'admin@www.laihui.com'}
+�ϴ��ļ�:None
+��Ӧ����:{'code': 0, 'message': '����ɹ�!', 'data': {'access_token': 'ad1d7ea6-1216-41ad-93c1-6675168544bc', 'expires_in': 33620, 'token_type': 'bearer', 'refresh_token': '47b2779b-e11a-47ea-abd8-42b2bc45f8a2', 'scope': 'web', 'jti': None}, 'ext': None, 'success': True}[0m
+[32m2021-11-05 09:46:00.096[0m | [31m[1mERROR   [0m | [36mtools[0m:[36mconvert_json[0m:[36m95[0m - [31m[1mExpecting property name enclosed in double quotes: line 1 column 2 (char 1)[0m
+[32m2021-11-05 09:46:00.097[0m | [1mINFO    [0m | [36mtools.data_process[0m:[36mhandle_extra[0m:[36m105[0m - [1m���������ֵ�,key: token, ��Ӧvalue: $.data.access_token[0m
+[32m2021-11-05 09:46:00.098[0m | [31m[1mERROR   [0m | [36mtools[0m:[36mconvert_json[0m:[36m95[0m - [31m[1mExpecting property name enclosed in double quotes: line 1 column 2 (char 1)[0m
+[32m2021-11-05 09:46:00.098[0m | [1mINFO    [0m | [36mtools.data_process[0m:[36massert_result[0m:[36m123[0m - [1m��1������,ʵ�ʽ��:0 | Ԥ�ڽ��:0 
+���Խ�� True[0m
+[32m2021-11-05 09:46:00.099[0m | [1mINFO    [0m | [36mtools.data_process[0m:[36massert_result[0m:[36m123[0m - [1m��2������,ʵ�ʽ��:����ɹ�! | Ԥ�ڽ��:����ɹ�! 
+���Խ�� True[0m
